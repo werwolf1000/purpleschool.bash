@@ -1,8 +1,5 @@
 #!/bin/bash
 
-var_os=$(cat /etc/os-release)
-var_os_work=$(uptime)
-
 printf "Упражнение 1: Имя пользователя\n\n"
 #Напиши скрипт оболочки, который выводит имя твоего пользователя. Подсказка: используй команду echo с переменной среды USER."
 echo $USER
@@ -38,6 +35,8 @@ printf "\nУпражнение 6: Полная информация\n\n"
 echo "Привет Моё имя $USER" 
 echo "Сейчас я нахожусь в $PWD" 
 echo "Мой домашний каталог $HOME" 
-echo "Моя ОС $var_os"
-echo "Мое время работы $var_os_work"
+echo "Моя ОС"
+cat /etc/os-release
+echo "Мое время работы"
+uptime
 
