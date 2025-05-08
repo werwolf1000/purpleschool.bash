@@ -4,14 +4,10 @@
 
 #Формат должен быть таким: ``` Привет, какой сегодня день недели? tuesday Уже tuesday Какое сегодня число? 1 Не думал что tuesday будет 1 числа Я считаю что сегодня Tue Oct 1 10:59:01 UTC 2024 ```
 
-echo $0
-echo "$3 $2 $1"
-
 dt=$(date)
 
 read -p "Привет, какой сегодня день недели? "  day_of_the_week 
 echo "Уже $day_of_the_week "
 
 read -p "сегодняшний день "  current_day 
-echo "$current_day Не думал что $day_of_the_week  будет $current_day числа"
-echo "Я считаю что сегодня ${dt}"
+echo "$current_day Не думал что $day_of_the_week  будет $current_day числа. Я считаю что сегодня ${dt}"
