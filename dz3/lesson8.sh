@@ -16,7 +16,7 @@ exit 1
 fi
 
 if [ $(($1 % 2)) -eq 0 ]; then
-echo "Number X is even"
+echo "Number $1 is even"
 else 
-echo "Number X is odd"
+echo "Number $1 is odd"
 fi
