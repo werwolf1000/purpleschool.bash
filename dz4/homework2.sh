@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-for dir in $( ls /var/*)
+for dir in /var/*
 do
  echo $dir
  done
