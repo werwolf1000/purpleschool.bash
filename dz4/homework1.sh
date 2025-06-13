@@ -3,6 +3,6 @@
 
 for message in {1..10}
 do
-    echo $message
+    echo "Ваше сообщение"
 done
 
