@@ -1,7 +1,11 @@
 #!/bin/bash
 
 
-
+if [ $# -eq 0 ];
+then
+    echo "Не переданы входные параметры"
+    exit 1
+fi
 
 
 calculate()

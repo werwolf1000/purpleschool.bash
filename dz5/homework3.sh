@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+if [ $# -eq 0 ];
+then
+    echo "Не переданы входные параметры"
+    exit 1
+fi
+
 num=$1
 
 func() 
@@ -7,7 +14,10 @@ func()
         if [ $num -gt 0 ];            
         then        
             
-            if [ $num -eq 1 ] || [ $num -eq 2 ];
+            if [ $num -eq 1 ];
+            then
+                result="Не простое число"                
+            elif [ $num -eq 2 ];
             then
                 result="Простое число"
             else
