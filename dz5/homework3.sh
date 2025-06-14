@@ -16,7 +16,7 @@ func()
             
             if [ $num -eq 1 ];
             then
-                result="Не простое число"                
+                result="Простое число"                
             elif [ $num -eq 2 ];
             then
                 result="Простое число"
