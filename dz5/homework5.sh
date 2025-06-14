@@ -5,6 +5,7 @@ num=$1
 
 if [ $num -le 3 ];
 then
+    echo "Число должно быть больше 3"
     exit 1
 fi
 
