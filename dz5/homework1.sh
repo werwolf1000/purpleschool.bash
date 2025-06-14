@@ -4,7 +4,7 @@
 read -p "Enter number: " num
 
 func() {
-    if [ $num -ge 0 ];
+    if [ $num -gt 0 ];
     then 
         echo "Положительное"
     else
