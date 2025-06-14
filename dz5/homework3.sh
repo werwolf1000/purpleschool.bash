@@ -15,6 +15,9 @@ func()
                     break
                 fi    
             done
+        elif [ $num -eq 1 ] || [ $num -eq 2 ];
+        then
+             result="Простое число"
         else
             result="Не простое число"
         fi
