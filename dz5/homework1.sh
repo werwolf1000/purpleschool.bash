@@ -1,15 +1,22 @@
 #!/bin/bash
 
-
-read -p "Enter number: " num
-
-func() {
-    if [ $1 -gt 0 ];
-    then 
-        echo "Положительное"
+# Функция для проверки положительного числа
+is_positive() {
+    local num=$1
+    
+    # Проверяем, что число больше нуля
+    if ((num > 0)); then
+        return 0  # Положительное
     else
-        echo "Не положительное"
-    fi   
+        return 1  # Не положительное (отрицательное или ноль)
+    fi
 }
 
-func $num
+# Основная часть скрипта
+read -p "Введите число: " number
+
+if is_positive "$number"; then
+    echo "$number — положительное число."
+else
+    echo "$number — не является положительным числом."
+fi
