@@ -13,24 +13,15 @@ func()
 {   
         if [ $num -gt 0 ];            
         then        
-            
-            if [ $num -eq 1 ];
-            then
-                result="Простое число"                
-            elif [ $num -eq 2 ];
-            then
-                result="Простое число"
-            else
-                result="Простое число"
-                for (( i=2; i < num; i++ ))
-                do
-                    if [ $(( num % i )) -eq 0  ];
-                    then
-                        result="Не простое число"
-                        break
-                    fi    
-                done
-            fi
+            result="Простое число"
+            for (( i=1; i < num; i++ ))
+            do
+                if [ $(( num % i )) -eq 0  ] && [ $num -ne $i ]  && [ $i -gt 1 ];                
+                then
+                    result="Не простое число"
+                    break
+                fi    
+            done
         else
             result="Не простое число"
         fi
