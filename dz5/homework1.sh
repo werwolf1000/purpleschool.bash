@@ -5,7 +5,7 @@ is_positive() {
     local num=$1
     
     # Проверяем, что число больше нуля
-    if ((num > 0)); then
+    if ((num >= 0)); then
         return 0  # Положительное
     else
         return 1  # Не положительное (отрицательное или ноль)
